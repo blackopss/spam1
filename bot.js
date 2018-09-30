@@ -28,13 +28,27 @@ client.on('ready', async() => {
 var server = "493540109690339338"; // ايدي السررفر
 var channel = "493540109690339340";//ايدي الروم
     setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('#rep @Emoko#0069')
+    client.guilds.get(server).channels.get(channel).send('#rep <@244423000802328576>')
     },86400);
 })
 
 
+client.on('ready', async() => {
+var server = "493540109690339338"; // ايدي السررفر
+var channel = "493540109690339340";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('t!rep <@244423000802328576>')
+    },86400);
+})
 
 
+client.on('ready', async() => {
+var server = "493540109690339338"; // ايدي السررفر
+var channel = "493540109690339340";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('t!daily')
+    },86400);
+})
 
 
 
