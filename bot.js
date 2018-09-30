@@ -24,6 +24,18 @@ var channel = "493540109690339340";//ايدي الروم
 })
 
 
+client.on('ready', async() => {
+var server = "493540109690339338"; // ايدي السررفر
+var channel = "493540109690339340";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('#rep @Emoko#0069')
+    },86400);
+})
+
+
+
+
+
 
 
 client.login(process.env.BOT_TOKEN); 
