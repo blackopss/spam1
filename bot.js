@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on("guildMemberAdd", member => {
-    setTimeout(function() {
+    setTimeout(function(channel) {
         member.createDM().then(function (channel) {
             return channel.send(`
 **
