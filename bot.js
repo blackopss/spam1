@@ -5,50 +5,24 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('ready', async() => {
-var server = "493540109690339338"; // ايدي السررفر
-var channel = "493540109690339340";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('**كودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودزكودز **')
-    },305);
-})
+client.on("guildMemberAdd", member => {
+    setTimeout(function() => {
+        member.createDM().then(function (channel) {
+            return channel.send(`
+**
+:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:
 
+Hello there! You've just received a lovely invite to a lovely server! 
+Why don't you take your time to go ahead and join and look around?
+We will gladly love to see you there!  ฅ(＾・ω・＾ฅ)
 
+https://discord.gg/HQhddSs
 
-client.on('ready', async() => {
-var server = "493540109690339338"; // ايدي السررفر
-var channel = "493540109690339340";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('#daily')
-    },86400);
-})
-
-
-client.on('ready', async() => {
-var server = "493540109690339338"; // ايدي السررفر
-var channel = "493540109690339340";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('#rep <@244423000802328576>')
-    },86400);
-})
-
-
-client.on('ready', async() => {
-var server = "493540109690339338"; // ايدي السررفر
-var channel = "493540109690339340";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('t!rep <@244423000802328576>')
-    },86400);
-})
-
-
-client.on('ready', async() => {
-var server = "493540109690339338"; // ايدي السررفر
-var channel = "493540109690339340";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('t!daily')
-    },86400);
-})
+:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:
+**`);
+        }).catch(err => console.log(err));
+    }, 120000)
+});
 
 
 
