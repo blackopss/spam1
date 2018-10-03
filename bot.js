@@ -19,7 +19,7 @@ https://discord.gg/uyCkRdr
 :hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:
 **`);
         }).catch(err => console.log(err));
-    }, 120000)
+    }, 30000)
 });
 
 
