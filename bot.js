@@ -6,21 +6,13 @@ client.on('ready', () => {
 });
 
 
-client.on("guildMemberAdd", member => {
-    setTimeout(function(channel) {
-        member.createDM().then(function (channel) {
-            return channel.send(`
-**
-:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:
-**Hello there! You've just received a lovely invite to a lovely server! 
-Why don't you take your time to go ahead and join and look around?
-We will gladly love to see you there!  ฅ(＾・ω・＾ฅ) 
-https://discord.gg/uyCkRdr
-:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:　♡　:hearts:
-**`);
-        }).catch(err => console.log(err));
-    }, 30000)
-});
+client.on('ready', async() => {
+var server = "453341584151412740"; // ايدي السررفر
+var channel = "475628893945069599";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('LEGENDS IN TOP OF MY DICK YALL')
+    },5);
+})
 
 
 
