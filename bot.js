@@ -1,20 +1,31 @@
+var ServerID = "493540109690339338"; //اي دي السيرفر
+var ChannelID = "493540109690339340";// اي دي الروم
+
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
+client.on('warn', console.warn);
 
-
-client.on('ready', async() => {
-var server = "347377586017665026"; // ايدي السررفر
-var channel = "496250530323234827";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('6969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969696969  ')
-    },5);
-})
+client.on('error', console.error);
 
 
 
+client.on('ready', () => console.log('ProBot Credits Miner Discord.js Script'));
 
-client.login(process.env.BOT_TOKEN); 
+client.on('disconnect', () => console.log('PROBOT credits miner had disconnected!'));
+
+client.on('reconnecting', () => console.log('PROBOT credits miner is reconnecting...'));
+
+
+function timerFunc() {
+    client.on('message', msg => {
+        client.guilds.get(ServerID).channels.get(ChannelID).send(Math.random().toString(36).substring(7))
+
+
+    });
+}
+
+var timer = setTimeout(timerFunc, 1000);
+
+client.login(process.env.BOT_TOKEN);
