@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = '.'
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`Emoko maid ready to pleasure you daddy ~`);
 });
 
 client.on('message', msg => {
@@ -565,7 +565,7 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
 const adminprefix = ".";
 const developers = ['244423000802328576'];
 
-console.log("Paaaaartly");
+console.log("YES YES AHHH! *cums*");
 
 client.on('ready', () => {
     console.log(`Logged as ${client.user.tag}`)
