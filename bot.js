@@ -562,7 +562,6 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
 
 
 ///status
-const client = new Discord.Client();
 const adminprefix = ".";
 const developers = ['244423000802328576'];
 
