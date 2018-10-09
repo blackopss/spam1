@@ -1,31 +1,21 @@
-var ServerID = "493540109690339338"; //اي دي السيرفر
-var ChannelID = "493540109690339340";// اي دي الروم
-
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = '.'
 
-client.on('warn', console.warn);
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
 
-client.on('error', console.error);
-
-
-
-client.on('ready', () => console.log('ProBot Credits Miner Discord.js Script'));
-
-client.on('disconnect', () => console.log('PROBOT credits miner had disconnected!'));
-
-client.on('reconnecting', () => console.log('PROBOT credits miner is reconnecting...'));
-
-
-function timerFunc() {
-    client.on('message', msg => {
-        client.guilds.get(ServerID).channels.get(ChannelID).send(Math.random().toString(36).substring(7))
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
 
 
-    });
-}
 
-var timer = setTimeout(timerFunc, 1000);
 
-client.login(process.env.BOT_TOKEN);
+
+
+
+client.login('token');
