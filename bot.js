@@ -596,5 +596,12 @@ client.on('message', message => {
 });
 ///status end
 
+///Welcome
+client.on('guildMemberAdd', member => {
+    if(member.user.bot) return;
+    member.guild.channels.get("496250530323234827").send(`O New Pal ${member} jumped in メ NightCorePals メ ! Welcome <:Wave:348835926291644427> have a fun time here ^^`, {files: ["https://i.imgur.com/kfQDwer.jpg"]})
+    member.guild.channels.get("496221356149571585").send(`Hey ${member} welcome to **NightCorePals**! Please make sure to read <#496222081814495232> And have fun <:Wave:348835926291644427>`)
+})
+///Welcome End
 
 client.login(process.env.BOT_TOKEN);
